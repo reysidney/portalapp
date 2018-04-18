@@ -47,7 +47,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 // Passport MW
 app.use(passport.initialize());
 app.use(passport.session());
-
 require('./config/passport')(passport);
 
 // Route
