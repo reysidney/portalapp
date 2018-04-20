@@ -21,8 +21,20 @@ This is a project for using MEAN(MongoDB, Express, Angular, NodeJS)
 - Compile CSS/JS
 
         gulp
+
+- Generate new component in Frontend
+
+        cd angular-src/src/app/components
+        ng g components <component name>
+
+- Add routes in angular-src/src/app/app.module.ts
         
-- Run Server
+- Run Back Server
 
         nodemon
+
+- Run Front Server
+
+        cd angular-src
+        ng serve
 

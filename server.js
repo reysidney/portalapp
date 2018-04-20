@@ -50,7 +50,7 @@ app.use(passport.session());
 require('./config/passport')(passport);
 
 // Route
-app.use('/', r_index);
+//app.use('/', r_index);
 app.use('/users', r_user);
 
 // Start Folder
