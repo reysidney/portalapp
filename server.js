@@ -20,7 +20,6 @@ mongoose.connection.on('error', (err) => {
 });
 
 // Init route variables
-const r_index = require('./routes/index');
 const r_user = require('./routes/users');
 
 // Init port variable
@@ -50,7 +49,6 @@ app.use(passport.session());
 require('./config/passport')(passport);
 
 // Route
-//app.use('/', r_index);
 app.use('/users', r_user);
 
 // Start Folder

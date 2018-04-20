@@ -46,13 +46,14 @@ router.post('/authenticate', (req, res, next) => {
         User.comparePassword(password, user.password, (err, isMatch) => {
             if(err) throw err;
             if(isMatch) {
-                var token = jwt.sign(user, config.secret, {
+                var token = jwt.sign(user.toJSON(), config.secret, {
                     expiresIn: 9000 //15 mins
                 });
 
                 res.json({
                     success: true,
-                    token: 'JWT ' + token,
+                    token: 'JWT ' + token,                    
+                    message: "Welcome " + user.name + "!",
                     user:  {
                         id: user._id,
                         name: user.name,

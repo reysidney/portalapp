@@ -1,5 +1,5 @@
-# MEAN FRAMEWORK
-This is a project for using MEAN(MongoDB, Express, Angular, NodeJS)
+# MEAN.JS
+This is a project to help me in using MEAN(MongoDB, Express, Angular2, NodeJS)
 
 ## Setup
 - Make sure you have node installed
@@ -27,7 +27,7 @@ This is a project for using MEAN(MongoDB, Express, Angular, NodeJS)
         cd angular-src/src/app/components
         ng g components <component name>
 
-- Add routes in angular-src/src/app/app.module.ts
+- Add frontend routes in angular-src/src/app/app.module.ts
         
 - Run Back Server
 
