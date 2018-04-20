@@ -23,6 +23,7 @@ import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { AuthLogoutGuard } from './guards/authlogout.guard';
 
+// Route Variable
 const appRoutes: Routes = [
     {path:'', component: HomeComponent},
     {path:'register', component: RegisterComponent, canActivate:[AuthLogoutGuard]},

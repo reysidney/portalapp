@@ -51,7 +51,17 @@ require('./config/passport')(passport);
 // Route
 app.use('/users', r_user);
 
+// Index Route
+app.get('/', (req, res) => {
+    res.send('Invalid Endpoint');
+});
+
+//All Routes
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+});
+
 // Start Folder
 app.listen(port, () => {
-    console.log('server running on: http://localhost:' + port);
+    console.log('Server running on: http://localhost:' + port);
 });
