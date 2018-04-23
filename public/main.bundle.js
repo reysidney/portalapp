@@ -669,7 +669,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AuthService = (function () {
     function AuthService(http) {
         this.http = http;
-        this.backendServer = "http://localhost:3000";
+        //backendServer : String = "http://localhost:3000";
+        this.backendServer = ""; // null for heroku
     }
     AuthService.prototype.registerUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();

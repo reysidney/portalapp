@@ -7,7 +7,8 @@ import { tokenNotExpired } from 'angular2-jwt';
 export class AuthService {
     authToken: any;
     user: any;
-    backendServer : String = "http://localhost:3000";
+    //backendServer : String = "http://localhost:3000";
+    backendServer : String = ""; // null for heroku
 
     constructor(
         private http: Http

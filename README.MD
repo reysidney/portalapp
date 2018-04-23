@@ -38,3 +38,7 @@ This is a project to help me in using MEAN(MongoDB, Express, Angular2, NodeJS)
         cd angular-src
         ng serve
 
+- Build Angular Project
+
+        ng build
+
