@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Router, Route } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-user-profile',
@@ -14,8 +15,12 @@ export class UserProfileComponent implements OnInit {
     constructor(
         private authService: AuthService, 
         private flashMessage: FlashMessagesService,
-        private router: Router
-    ) { }
+        private router: Router,
+        private titleService: Title 
+    ) 
+    { 
+        this.titleService.setTitle("Portal App | User Profile");
+    }
 
     ngOnInit() {
         this.authService.getProfile().subscribe(profile => {

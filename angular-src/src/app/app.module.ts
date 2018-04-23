@@ -1,5 +1,5 @@
 // Modules
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -49,7 +49,7 @@ const appRoutes: Routes = [
     FlashMessagesModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ValidateService, AuthService, AuthGuard, AuthLogoutGuard],
+  providers: [ValidateService, AuthService, AuthGuard, AuthLogoutGuard, Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

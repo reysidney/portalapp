@@ -3,6 +3,7 @@ import { ValidateService } from '../../services/validate.service';
 import { AuthService } from '../../services/auth.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Router, Route } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login',
@@ -18,8 +19,12 @@ export class LoginComponent implements OnInit {
         private authService: AuthService, 
         private validateService: ValidateService, 
         private flashMessage: FlashMessagesService,
-        private router: Router
-    ) { }
+        private router: Router,
+        private titleService: Title 
+    ) 
+    { 
+        this.titleService.setTitle("Portal App | Login");
+    }
 
     ngOnInit() {
     }
