@@ -5,13 +5,21 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
+const dev_env = false;
+var env_database;
+
+// Check DB env
+if(dev_env)
+    env_database = config.localdb;
+else 
+    env_database = config.database
 
 // Connect to DB
-mongoose.connect(config.database);
+mongoose.connect(env_database);
 
 // Success connecting to DB
 mongoose.connection.on('connected', () => {
-    console.log('Connected to database ' + config.database);
+    console.log('Connected to database ' + env_database);
 });
 
 // Error connecting to DB
